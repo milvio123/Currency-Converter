@@ -96,7 +96,7 @@ function Symbols() {
 
   function s(result) {
     myObj = JSON.parse(result)
-  alert(Object.keys(myObj.symbols))
+    alert(Object.keys(myObj.symbols))
   
   }
 
