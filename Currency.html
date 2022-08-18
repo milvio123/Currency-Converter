@@ -18,20 +18,24 @@
     <div class="container mt-3">
         <h2>Currency Converter</h2>
         <br>
-        <!-- Nav pills -->
+      
         <ul class="nav nav-pills" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" data-bs-toggle="pill" href="#Convert">Convert</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="pill" href="#Latest">Latest</a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link" data-bs-toggle="pill" href="#Time">Time</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="pill" href="#menu2">Symbols</a>
+            <a class="nav-link" data-bs-toggle="pill" href="#Symbols">Symbols</a>
           </li>
+
         </ul>
       
-        <!-- Tab panes -->
         <div class="tab-content">
 
           <div id="Convert" class="container tab-pane active"><br>
@@ -52,6 +56,24 @@
               </div>
             
           </div>
+
+          <div id="Latest" class="container tab-pane fade"><br>
+            
+              <div class="input-group">
+                <span class="input-group-text">Symbols</span>
+                <input id = "Symbols" type="text" class="form-control" placeholder="Username">
+              </div>
+
+              <div class="input-group">
+                <span class="input-group-text">Base</span>
+                <input id = "Base" type="text" class="form-control" placeholder="Username">
+              </div>
+            <button type="button" class="btn btn-primary btn-lg" onclick="Latest()">Submit</button>
+
+
+          </div>
+
+
 
 
           <div id="Time" class="container tab-pane fade"><br>
@@ -76,15 +98,15 @@
           </div>
 
 
-
-
-          <div id="menu2" class="container tab-pane fade"><br>
+          <div id="Symbols" class="container tab-pane fade"><br>
             <button type="button" class="btn btn-primary btn-lg" onclick="Symbols()">Get Symbols</button>
 
 
 
 
           </div>
+
+          
         </div>
       </div>
             

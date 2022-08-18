@@ -20,7 +20,7 @@ fetch("https://api.apilayer.com/exchangerates_data/convert?to=" + to + "&from=" 
 
 }
 
-function TimeSeriesFunc() {
+function DateFunc() {
   var myHeaders = new Headers();
   myHeaders.append("apikey", "cNhzO2khu8ukvvXhSCRqBDdNETeQIL7c");
   
@@ -36,6 +36,27 @@ function TimeSeriesFunc() {
 
   
   fetch("https://api.apilayer.com/exchangerates_data/" + date + "?symbols=" + symbols + "&base=" + base, requestOptions)
+    .then(response => response.text())
+    .then(result => z(result)      )
+    .catch(error => console.log('error', error));
+  
+}
+
+function Latest() {
+  var myHeaders = new Headers();
+  myHeaders.append("apikey", "cNhzO2khu8ukvvXhSCRqBDdNETeQIL7c");
+  
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow',
+    headers: myHeaders
+  };
+
+  var symbols = document.getElementById("Symbols").value
+  var base = document.getElementById("Base").value
+
+  
+  fetch("https://api.apilayer.com/exchangerates_data/latest?symbols=" + symbols + "&base=" + base, requestOptions)
     .then(response => response.text())
     .then(result => z(result)      )
     .catch(error => console.log('error', error));
