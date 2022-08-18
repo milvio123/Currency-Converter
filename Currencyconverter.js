@@ -1,5 +1,9 @@
 var myObj = 0;
 function ConvertFunc() {
+var to = 0
+var from = 0
+var amount = 0
+
 
 var myHeaders = new Headers();
 myHeaders.append("apikey", "cNhzO2khu8ukvvXhSCRqBDdNETeQIL7c");
@@ -10,9 +14,9 @@ var requestOptions = {
   headers: myHeaders
 };
 
-var to = document.getElementById("To").value
-var from = document.getElementById("From").value
-var amount = document.getElementById("Amount").value
+ to = document.getElementById("To").value
+ from = document.getElementById("From").value
+ amount = document.getElementById("Amount").value
 fetch("https://api.apilayer.com/exchangerates_data/convert?to=" + to + "&from=" + from  + "&amount=" + amount, requestOptions)
   .then(response => response.text())
   .then(result => f(result)      )
@@ -30,9 +34,9 @@ function DateFunc() {
     headers: myHeaders
   };
 
-  var date = document.getElementById("Date").value
-  var symbols = document.getElementById("Symbols").value
-  var base = document.getElementById("Base").value
+   var date = document.getElementById("Date").value
+   var symbols = document.getElementById("Symbols").value
+   var base = document.getElementById("Base").value
 
   
   fetch("https://api.apilayer.com/exchangerates_data/" + date + "?symbols=" + symbols + "&base=" + base, requestOptions)
@@ -52,8 +56,8 @@ function Latest() {
     headers: myHeaders
   };
 
-  var symbols = document.getElementById("Symbols").value
-  var base = document.getElementById("Base").value
+   var symbols = document.getElementById("Symbols").value
+   var base = document.getElementById("Base").value
 
   
   fetch("https://api.apilayer.com/exchangerates_data/latest?symbols=" + symbols + "&base=" + base, requestOptions)
