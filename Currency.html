@@ -13,7 +13,6 @@
     
 </head>
 <body>
-
     <div class="container mt-3">
         <h2>Currency Converter</h2>
         <br>
@@ -25,10 +24,10 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="pill" href="#Latest">Latest</a>
           </li>
-
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="pill" href="#Time">Time</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="pill" href="#Symbols">Symbols</a>
           </li>
@@ -53,43 +52,44 @@
                 <span class="input-group-text">Amount</span>
                 <input id = "Amount" type="text" class="form-control" placeholder="Amount">
               </div>
+              <button type="button" class="btn btn-primary btn-lg" onclick="ConvertFunc()">Submit</button>
+
           </div>
+
+
 
           <div id="Latest" class="container tab-pane fade"><br>
             
               <div class="input-group">
                 <span class="input-group-text">Symbols</span>
-                <input id = "Symbols" type="text" class="form-control" placeholder="Symbols">
+                <input id = "symbolsl" type="text" class="form-control" placeholder="Symbols">
               </div>
 
               <div class="input-group">
                 <span class="input-group-text">Base</span>
-                <input id = "Base" type="text" class="form-control" placeholder="Base">
+                <input id = "Basel" type="text" class="form-control" placeholder="Base">
               </div>
             <button type="button" class="btn btn-primary btn-lg" onclick="Latest()">Submit</button>
-
           </div>
-
-
 
 
           <div id="Time" class="container tab-pane fade"><br>
 
             <div class="input-group">
                 <span class="input-group-text">Date</span>
-                <input id = "Date" type="text" class="form-control" placeholder="Date">
+                <input id = "Datet" type="text" class="form-control" placeholder="Date">
               </div>
             
               <div class="input-group">
                 <span class="input-group-text">Symbols</span>
-                <input id = "Symbols" type="text" class="form-control" placeholder="Symbols">
+                <input id = "Symbolst" type="text" class="form-control" placeholder="Symbols">
               </div>
 
               <div class="input-group">
                 <span class="input-group-text">Base</span>
-                <input id = "Base" type="text" class="form-control" placeholder="Base">
+                <input id = "Baset" type="text" class="form-control" placeholder="Base">
               </div>
-            <button type="button" class="btn btn-primary btn-lg" onclick="TimeSeriesFunc()">Submit</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="DateFunc()">Submit</button>
           </div>
 
 
